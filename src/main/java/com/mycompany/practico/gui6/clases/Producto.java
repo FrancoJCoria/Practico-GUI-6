@@ -1,13 +1,94 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
+
 package com.mycompany.practico.gui6.clases;
 
-/**
- *
- * @author FRANCO
- */
+
+
+
 public class Producto {
+
+    
+    private int codigo;
+    private String descripcion;
+    private double precio;
+    private int stock;
+    private String rubro;
+
+    
+    public Producto(){};
+    public Producto(int codigo, String descripcion, double precio, int stock, String rubro) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.stock = stock;
+        this.rubro = rubro;
+    }
+    
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public String getRubro() {
+        return rubro;
+    }
+
+    public void setRubro(String rubro) {
+        this.rubro = rubro;
+    }
+    
+   
+    public int compareTo(Producto o) {
+        return Integer.compare(this.codigo, o.codigo);
+    }
+    
+    @Override
+    public boolean equals(Object obj){
+        if(this == obj) return true;
+        
+        if(obj == null || getClass() != obj.getClass()) return false;
+        
+        Producto otro = (Producto) obj;
+        
+        return this.codigo == otro.codigo;
+    }
+    
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(codigo);
+    }
+    
+    
+    @Override
+    public String toString(){
+        return codigo + " " + descripcion + " ( " + rubro + " )";
+    }
     
 }

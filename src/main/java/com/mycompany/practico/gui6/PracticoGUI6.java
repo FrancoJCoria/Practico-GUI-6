@@ -4,7 +4,11 @@
 
 package com.mycompany.practico.gui6;
 
+
+import com.mycompany.practico.gui6.clases.Producto;
 import com.mycompany.practico.gui6.gui.VistaProductos;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  *
@@ -19,4 +23,8 @@ public class PracticoGUI6 {
             }
         });
     }
+    
+    TreeSet<Producto> productos = new TreeSet<>();
+    
+     
 }
