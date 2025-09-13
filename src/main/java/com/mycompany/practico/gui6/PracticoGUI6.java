@@ -15,6 +15,7 @@ public class PracticoGUI6 {
                 new VistaProductos().setVisible(true);
             }
         });
+        
          TreeSet<Producto> productos = new TreeSet<>();
     
     }
