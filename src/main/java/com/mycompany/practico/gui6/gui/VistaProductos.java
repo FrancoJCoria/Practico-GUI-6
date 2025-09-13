@@ -4,6 +4,8 @@
  */
 package com.mycompany.practico.gui6.gui;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author FRANCO
@@ -14,7 +16,14 @@ public class VistaProductos extends javax.swing.JFrame {
      * Creates new form VistaProductos
      */
     public VistaProductos() {
+        super("Gestor de Productos");
+        ImageIcon icono = new ImageIcon(getClass().getResource("/src/main/java/com/mycompany/practico/gui6/icono/caja.png"));
+        setSize(400,300);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
         initComponents();
+        
+        
     }
 
     /**
