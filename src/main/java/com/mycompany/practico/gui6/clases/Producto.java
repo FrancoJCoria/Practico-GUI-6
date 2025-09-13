@@ -64,11 +64,6 @@ public class Producto {
         this.rubro = rubro;
     }
     
-   
-    public int compareTo(Producto o) {
-        return Integer.compare(this.codigo, o.codigo);
-    }
-    
     
     
     @Override
