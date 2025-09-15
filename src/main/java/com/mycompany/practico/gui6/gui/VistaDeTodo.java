@@ -69,6 +69,11 @@ public class VistaDeTodo extends javax.swing.JFrame {
         menuCons.setText("Consultas");
 
         jMenuItem1.setText("Consulta por Nombre");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         menuCons.add(jMenuItem1);
 
         jMenuItem2.setText("Consulta por Precio");
@@ -123,6 +128,12 @@ public class VistaDeTodo extends javax.swing.JFrame {
         jDesktopPane1.add(precio);
         precio.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+          VistaConsultaPorNombre vg = new VistaConsultaPorNombre();
+        jDesktopPane1.add(vg);
+        vg.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
