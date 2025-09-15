@@ -3,18 +3,19 @@ package com.mycompany.practico.gui6;
 import com.mycompany.practico.gui6.clases.Producto;
 import com.mycompany.practico.gui6.gui.VistaDeTodo;
 import com.mycompany.practico.gui6.gui.VistaProductos;
-import java.util.Set;
+import java.util.Comparator;
 import java.util.TreeSet;
 
 public class PracticoGUI6 {
 
     public static void main(String[] args) {
-        /*java.awt.EventQueue.invokeLater(new Runnable() {
+
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VistaProductos().setVisible(true);
             }
         });
-         */
+         
         Producto producto1 = new Producto(1, "Papas Fritas", 43.5, 23, "Comestible");
         Producto producto2 = new Producto(2, "Paco Rabanne", 43.5, 23, "Perfumeria");
         Producto producto3 = new Producto(3, "Milanesas", 43.5, 23, "Comestible");
@@ -47,6 +48,7 @@ public class PracticoGUI6 {
         }); 
 
         
+
     }
 
 }
