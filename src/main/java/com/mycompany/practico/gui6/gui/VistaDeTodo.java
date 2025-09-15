@@ -6,6 +6,7 @@ package com.mycompany.practico.gui6.gui;
 
 import com.mycompany.practico.gui6.clases.Producto;
 import java.util.TreeSet;
+import javax.swing.JInternalFrame;
 
 /**
  *
@@ -35,6 +36,9 @@ public class VistaDeTodo extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         menuAdmin = new javax.swing.JMenu();
         menuCons = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,6 +67,21 @@ public class VistaDeTodo extends javax.swing.JFrame {
         jMenuBar1.add(menuAdmin);
 
         menuCons.setText("Consultas");
+
+        jMenuItem1.setText("Consulta por Nombre");
+        menuCons.add(jMenuItem1);
+
+        jMenuItem2.setText("Consulta por Precio");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        menuCons.add(jMenuItem2);
+
+        jMenuItem3.setText("Consulta por Rubro");
+        menuCons.add(jMenuItem3);
+
         jMenuBar1.add(menuCons);
 
         setJMenuBar(jMenuBar1);
@@ -94,6 +113,16 @@ public class VistaDeTodo extends javax.swing.JFrame {
         jDesktopPane1.add(vg);
         vg.setVisible(true);
     }//GEN-LAST:event_menuAdminMouseClicked
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        for (JInternalFrame frame : jDesktopPane1.getAllFrames()) {
+            frame.dispose();
+        }
+
+        VistaConsultaPorPrecio precio = new VistaConsultaPorPrecio();
+        jDesktopPane1.add(precio);
+        precio.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,6 +162,9 @@ public class VistaDeTodo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenu menuAdmin;
     private javax.swing.JMenu menuCons;
     // End of variables declaration//GEN-END:variables
