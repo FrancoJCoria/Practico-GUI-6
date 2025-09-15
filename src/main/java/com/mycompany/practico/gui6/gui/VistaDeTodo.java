@@ -80,6 +80,11 @@ public class VistaDeTodo extends javax.swing.JFrame {
         menuCons.add(jMenuItem2);
 
         jMenuItem3.setText("Consulta por Rubro");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         menuCons.add(jMenuItem3);
 
         jMenuBar1.add(menuCons);
@@ -123,6 +128,17 @@ public class VistaDeTodo extends javax.swing.JFrame {
         jDesktopPane1.add(precio);
         precio.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+         for (JInternalFrame frame : jDesktopPane1.getAllFrames()) {
+            frame.dispose();
+        }
+
+        VistaConsultaPorRubro rubro = new VistaConsultaPorRubro(productos);
+        jDesktopPane1.add(rubro);
+        rubro.setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
