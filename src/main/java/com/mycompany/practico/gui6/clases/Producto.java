@@ -5,7 +5,7 @@ package com.mycompany.practico.gui6.clases;
 
 
 
-public class Producto {
+public class Producto implements Comparable<Producto> {
 
     
     private int codigo;
