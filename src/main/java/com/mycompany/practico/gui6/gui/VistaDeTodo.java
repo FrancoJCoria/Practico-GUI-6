@@ -19,6 +19,14 @@ public class VistaDeTodo extends javax.swing.JFrame {
      */
     public static TreeSet<Producto> productos = new TreeSet<>();
 
+    private void abrirInternal(JInternalFrame nuevo) {
+        for (JInternalFrame frame : jDesktopPane1.getAllFrames()) {
+            frame.dispose();
+        }
+        jDesktopPane1.add(nuevo);
+        nuevo.setVisible(true);
+    }
+
     public VistaDeTodo() {
         initComponents();
     }
@@ -120,31 +128,26 @@ public class VistaDeTodo extends javax.swing.JFrame {
 
     private void menuAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuAdminMouseClicked
         VistaGestionP vg = new VistaGestionP();
-        jDesktopPane1.add(vg);
-        vg.setVisible(true);
+        abrirInternal(vg);
     }//GEN-LAST:event_menuAdminMouseClicked
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
 
         VistaConsultaPorPrecio precio = new VistaConsultaPorPrecio();
-        jDesktopPane1.add(precio);
-        precio.setVisible(true);
+        abrirInternal(precio);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
-
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         VistaConsultaPorRubro rubro = new VistaConsultaPorRubro(productos);
-        jDesktopPane1.add(rubro);
-        rubro.setVisible(true);
+        abrirInternal(rubro);
+
     }
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {
-          VistaConsultaPorNombre vg = new VistaConsultaPorNombre();
-        jDesktopPane1.add(vg);
-        vg.setVisible(true);
+        VistaConsultaPorNombre vg = new VistaConsultaPorNombre();
+        abrirInternal(vg);
     }
-
 
     /**
      * @param args the command line arguments
